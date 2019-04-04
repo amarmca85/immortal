@@ -1,0 +1,1328 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E735CF49-BE44-4FE9-B654-BDEBD0EDFD7F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PSEBONLINE</RootNamespace>
+    <AssemblyName>PSEBONLINE</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ClosedXML">
+      <HintPath>C:\Users\Jun 15\Desktop\PSEBONLINE_Ranjan_16Aug\PSEBONLINE\bin\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.5.5631.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.5\lib\DocumentFormat.OpenXml.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ionic.Zip.Reduced, Version=1.9.1.8, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Ionic.Zip.Reduced.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>C:\Users\Jun 15\Desktop\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.0.1011, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.0\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.1.2.3\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.1.2.3\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.1.2.3\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.1.2.3\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.1.2.3\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationBlocks.Data, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationBlocks.Data.2.0.0\lib\net45\Microsoft.ApplicationBlocks.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=1.2.3.490, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.1.2.3\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.2015.Runtime.12.0.2.2402\lib\Microsoft.ReportViewer.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.2015.Runtime.12.0.2.2402\lib\Microsoft.ReportViewer.ProcessingObjectModel.DLL</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.3.0.1\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.0.1\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.3.0.1\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.0.1\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AbstractLayer\AdminDB.cs" />
+    <Compile Include="AbstractLayer\AffiliationDB.cs" />
+    <Compile Include="AbstractLayer\BankDB.cs" />
+    <Compile Include="AbstractLayer\CaptchaClass.cs" />
+    <Compile Include="AbstractLayer\CompDB.cs" />
+    <Compile Include="AbstractLayer\DBClass.cs" />
+    <Compile Include="AbstractLayer\DEODB.cs" />
+    <Compile Include="AbstractLayer\DMDB.cs" />
+    <Compile Include="AbstractLayer\ErrorLog.cs" />
+    <Compile Include="AbstractLayer\HomeDB.cs" />
+    <Compile Include="AbstractLayer\ImportDB.cs" />
+    <Compile Include="AbstractLayer\MigrateSchoolDB.cs" />
+    <Compile Include="AbstractLayer\OpenDB.cs" />
+    <Compile Include="AbstractLayer\PrivateCandidateDB.cs" />
+    <Compile Include="AbstractLayer\PunAddDB.cs" />
+    <Compile Include="AbstractLayer\QueryStringModule.cs" />
+    <Compile Include="AbstractLayer\RecheckDB.cs" />
+    <Compile Include="AbstractLayer\RegistrationDB.cs" />
+    <Compile Include="AbstractLayer\ReportDB.cs" />
+    <Compile Include="AbstractLayer\SchoolDB.cs" />
+    <Compile Include="AbstractLayer\StaticDB.cs" />
+    <Compile Include="AbstractLayer\TCDB.cs" />
+    <Compile Include="AbstractLayer\WebSerDB.cs" />
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\AffiliationContinuationController.cs" />
+    <Compile Include="Controllers\BankController.cs" />
+    <Compile Include="Controllers\ChallanController.cs" />
+    <Compile Include="Controllers\CompartmentCandidatesController.cs" />
+    <Compile Include="Controllers\CorrectionSubjectsController.cs" />
+    <Compile Include="Controllers\DeoPortalController.cs" />
+    <Compile Include="Controllers\ExaminationPortalController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\RegistrationPortalController.cs" />
+    <Compile Include="Controllers\ReportController.cs" />
+    <Compile Include="Controllers\SchoolProfileController.cs" />
+    <Compile Include="etendering.aspx.cs">
+      <DependentUpon>etendering.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Models\AffiliationModel.cs" />
+    <Compile Include="Models\webSerModel.cs" />
+    <Compile Include="RPTDatasets\MatricSubjectDataSet.cs">
+      <DependentUpon>MatricSubjectDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\epunjabschool\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Content Include="bin\ApplicationInsights.config" />
+    <Content Include="bin\PSEBONLINE.dll.config" />
+    <Compile Include="Controllers\ImportDataController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MigrateSchoolController.cs" />
+    <Compile Include="Controllers\OpenController.cs" />
+    <Compile Include="Controllers\PrivateCandidateController.cs" />
+    <Compile Include="Controllers\PunAddController.cs" />
+    <Compile Include="Controllers\RecheckController.cs" />
+    <Compile Include="Controllers\SchoolController.cs" />
+    <Compile Include="Controllers\TCController.cs" />
+    <Compile Include="Controllers\TestController.cs" />
+    <Compile Include="AutoGenerateRDLC.aspx.cs">
+      <DependentUpon>AutoGenerateRDLC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controllers\WebserviceController.cs" />
+    <Compile Include="Finalprint.aspx.cs">
+      <DependentUpon>Finalprint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MergerdlcSchl.aspx.cs">
+      <DependentUpon>MergerdlcSchl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mergerdlc2 .aspx.cs">
+      <DependentUpon>Mergerdlc2 .aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mergerdlc.aspx.cs">
+      <DependentUpon>Mergerdlc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BankModels.cs" />
+    <Compile Include="Models\Challan.cs" />
+    <Compile Include="Models\CompartmentCandidatesModel.cs" />
+    <Compile Include="Models\DEOModel.cs" />
+    <Compile Include="Models\DMModel.cs" />
+    <Compile Include="Models\HomeModels.cs" />
+    <Compile Include="Models\AdminModels.cs" />
+    <Compile Include="Models\Import.cs" />
+    <Compile Include="Models\MigrateSchoolModels.cs" />
+    <Compile Include="Models\OpenModel.cs" />
+    <Compile Include="Models\PrivateCandidateModels.cs" />
+    <Compile Include="Models\PunAddModels.cs" />
+    <Compile Include="Models\RecheckModels.cs" />
+    <Compile Include="Models\ReportModel.cs" />
+    <Compile Include="Models\SchoolStaffDetailsModel.cs" />
+    <Compile Include="Models\TCModels.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="RPTDatasets\firmdata_onlineDataSet.cs">
+      <DependentUpon>firmdata_onlineDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RPTDatasets\firmdata_onlineDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>firmdata_onlineDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\AdminSchoolMasterModel.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\LoginModel.cs" />
+    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\RegistrationModels.cs" />
+    <Compile Include="Models\SchoolModels.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RPTDatasets\MatricSubjectDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MatricSubjectDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Startup.cs" />
+    <Compile Include="SVMReport.aspx.cs">
+      <DependentUpon>SVMReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SVMReport.aspx.designer.cs">
+      <DependentUpon>SVMReport.aspx</DependentUpon>
+    </Compile>
+    <Content Include="bin\Antlr3.Runtime.dll" />
+    <Content Include="bin\Antlr3.Runtime.pdb" />
+    <Content Include="bin\ClosedXML.dll" />
+    <Content Include="bin\EntityFramework.dll" />
+    <Content Include="bin\EntityFramework.SqlServer.dll" />
+    <Content Include="bin\EntityFramework.SqlServer.xml" />
+    <Content Include="bin\EntityFramework.xml" />
+    <Content Include="bin\Microsoft.AI.Agent.Intercept.dll" />
+    <Content Include="bin\Microsoft.AI.DependencyCollector.dll" />
+    <Content Include="bin\Microsoft.AI.DependencyCollector.xml" />
+    <Content Include="bin\Microsoft.AI.PerfCounterCollector.dll" />
+    <Content Include="bin\Microsoft.AI.ServerTelemetryChannel.dll" />
+    <Content Include="bin\Microsoft.AI.ServerTelemetryChannel.xml" />
+    <Content Include="bin\Microsoft.AI.Web.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="bin\Microsoft.AI.Web.xml" />
+    <Content Include="bin\Microsoft.AI.WindowsServer.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="bin\Microsoft.AI.WindowsServer.xml" />
+    <Content Include="bin\Microsoft.ApplicationBlocks.Data.dll" />
+    <Content Include="bin\Microsoft.ApplicationInsights.dll" />
+    <Content Include="bin\Microsoft.ApplicationInsights.xml" />
+    <Content Include="bin\Microsoft.AspNet.Identity.Core.dll" />
+    <Content Include="bin\Microsoft.AspNet.Identity.Core.xml" />
+    <Content Include="bin\Microsoft.AspNet.Identity.EntityFramework.dll" />
+    <Content Include="bin\Microsoft.AspNet.Identity.EntityFramework.xml" />
+    <Content Include="bin\Microsoft.AspNet.Identity.Owin.dll" />
+    <Content Include="bin\Microsoft.AspNet.Identity.Owin.xml" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
+    <Content Include="bin\Microsoft.Owin.dll" />
+    <Content Include="bin\Microsoft.Owin.Host.SystemWeb.dll" />
+    <Content Include="bin\Microsoft.Owin.Host.SystemWeb.xml" />
+    <Content Include="bin\Microsoft.Owin.Security.Cookies.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.Cookies.xml" />
+    <Content Include="bin\Microsoft.Owin.Security.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.Facebook.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.Facebook.xml" />
+    <Content Include="bin\Microsoft.Owin.Security.Google.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.Google.xml" />
+    <Content Include="bin\Microsoft.Owin.Security.MicrosoftAccount.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.MicrosoftAccount.xml" />
+    <Content Include="bin\Microsoft.Owin.Security.OAuth.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.OAuth.xml" />
+    <Content Include="bin\Microsoft.Owin.Security.Twitter.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.Twitter.xml" />
+    <Content Include="bin\Microsoft.Owin.Security.xml" />
+    <Content Include="bin\Microsoft.Owin.xml" />
+    <Content Include="bin\Microsoft.ReportViewer.Common.dll" />
+    <Content Include="bin\Microsoft.ReportViewer.ProcessingObjectModel.DLL" />
+    <Content Include="bin\Microsoft.ReportViewer.WebForms.dll" />
+    <Content Include="bin\Microsoft.SqlServer.Types.dll" />
+    <Content Include="bin\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="bin\Newtonsoft.Json.dll" />
+    <Content Include="bin\Newtonsoft.Json.xml" />
+    <Content Include="bin\Owin.dll" />
+    <Content Include="bin\PSEBONLINE.dll" />
+    <Content Include="bin\PSEBONLINE.pdb" />
+    <Content Include="bin\System.Web.Helpers.dll" />
+    <Content Include="bin\System.Web.Helpers.xml" />
+    <Content Include="bin\System.Web.Mvc.dll" />
+    <Content Include="bin\System.Web.Mvc.xml" />
+    <Content Include="bin\System.Web.Optimization.dll" />
+    <Content Include="bin\System.Web.Optimization.xml" />
+    <Content Include="bin\System.Web.Razor.dll" />
+    <Content Include="bin\System.Web.Razor.xml" />
+    <Content Include="bin\System.Web.WebPages.Deployment.dll" />
+    <Content Include="bin\System.Web.WebPages.Deployment.xml" />
+    <Content Include="bin\System.Web.WebPages.dll" />
+    <Content Include="bin\System.Web.WebPages.Razor.dll" />
+    <Content Include="bin\System.Web.WebPages.Razor.xml" />
+    <Content Include="bin\System.Web.WebPages.xml" />
+    <Content Include="bin\WebGrease.dll" />
+    <Content Include="Content\cardprintp.css" />
+    <Content Include="Content\jquery-ui.css" />
+    <Content Include="Content\keyboard.css" />
+    <Content Include="Content\print.css" />
+    <Content Include="AutoGenerateRDLC.aspx" />
+    <Content Include="Content\style.css" />
+    <Content Include="CutList.aspx" />
+    <Content Include="etendering.aspx" />
+    <Content Include="Images\PNBbank.gif" />
+    <Content Include="Images\SBPbank.png" />
+    <Content Include="MatricExamPortalOpen.aspx" />
+    <Content Include="ExamPortal.aspx" />
+    <Content Include="Finalprint.aspx" />
+    <Content Include="Images\lo.gif" />
+    <Content Include="Images\Slogo.jpg" />
+    <Content Include="MergerdlcSchl.aspx" />
+    <Content Include="Mergerdlc2 .aspx" />
+    <Content Include="Mergerdlc.aspx" />
+    <Content Include="Scripts\ChallanDepositDetails.js" />
+    <Content Include="Scripts\jquery-1.7.1.min.js" />
+    <Content Include="Scripts\jquery-2.2.3.min.js" />
+    <Content Include="Scripts\jquery.json.js" />
+    <Content Include="Scripts\jquery.json.min.js" />
+    <Content Include="Scripts\jquery.min.js" />
+    <Content Include="SeniorExamPortalOpen.aspx" />
+    <Content Include="SeniorExamPortal.aspx" />
+    <Content Include="StudentAllReport.aspx" />
+    <Content Include="Upload\N1\045\Photo\N1045234240P.jpg" />
+    <Content Include="Upload\N1\045\Photo\N1045234320P.jpg" />
+    <Content Include="Upload\N1\045\Photo\N1045234370P.jpg" />
+    <Content Include="Upload\N1\045\Sign\N1045234240S.jpg" />
+    <Content Include="Upload\N1\045\Sign\N1045234320S.jpg" />
+    <Content Include="Upload\N1\045\Sign\N1045234370S.jpg" />
+    <Content Include="Views\RegistrationPortal\E1Master.cshtml" />
+    <Content Include="Views\School\Photo_Upload.cshtml" />
+    <Content Include="Views\Shared\_PrintLayout.cshtml" />
+    <Content Include="Views\RegistrationPortal\T2Formgrid.cshtml" />
+    <Content Include="Views\RegistrationPortal\T2FormModify.cshtml" />
+    <Content Include="Views\RegistrationPortal\T2Formview.cshtml" />
+    <Content Include="Views\RegistrationPortal\AgreeResult.cshtml" />
+    <Content Include="Views\School\TCRequest.cshtml" />
+    <Content Include="Views\School\TCRequestDone.cshtml" />
+    <Content Include="Views\ImportData\ImportedData2017.cshtml" />
+    <Content Include="Views\RegistrationPortal\T1FormModify.cshtml" />
+    <Content Include="Views\RegistrationPortal\T1Formview.cshtml" />
+    <Content Include="Views\MigrateSchool\MigrationDetailView.cshtml" />
+    <Content Include="Views\MigrateSchool\MigrationForm.cshtml" />
+    <Content Include="Views\MigrateSchool\MigrationPrint.cshtml" />
+    <Content Include="Views\MigrateSchool\MigrationRec.cshtml" />
+    <Content Include="Views\MigrateSchool\RegEntryview.cshtml" />
+    <Content Include="Views\MigrateSchool\SchoolRegProcess.cshtml" />
+    <Content Include="Views\Report\PaymentSummary.cshtml" />
+    <Content Include="Views\RegistrationPortal\T1Formgrid.cshtml" />
+    <Content Include="Views\MigrateSchool\E1formview.cshtml" />
+    <Content Include="Views\MigrateSchool\N1formview.cshtml" />
+    <Content Include="Views\Report\_formwisereport.cshtml" />
+    <Content Include="Views\Report\_paymentsummary.cshtml" />
+    <Content Include="Views\Report\_schoolwisereport.cshtml" />
+    <Content Include="Views\Report\_summaryreport.cshtml" />
+    <Content Include="Views\School\Welcome.cshtml" />
+    <Content Include="Views\Admin\CreateUser.cshtml" />
+    <Content Include="Views\Admin\ViewUser.cshtml" />
+    <Content Include="Views\Admin\Welcome.cshtml" />
+    <Content Include="Views\Admin\PageNotAuthorized.cshtml" />
+    <Content Include="Views\Admin\MenuMaster.cshtml" />
+    <Content Include="Views\Admin\ModifyUser.cshtml" />
+    <Content Include="Views\Open\Applicationstatus.cshtml" />
+    <Content Include="Views\Open\Login.cshtml" />
+    <Content Include="Views\Open\Registration.cshtml" />
+    <Content Include="Views\Open\Subjects.cshtml" />
+    <Content Include="Views\Open\Index.cshtml" />
+    <Content Include="Views\Open\CalculateFee.cshtml" />
+    <Content Include="Views\Open\GenerateChallaan.cshtml" />
+    <Content Include="Views\Open\ApplicationForm.cshtml" />
+    <Content Include="Views\Open\ViewRegistration.cshtml" />
+    <Content Include="Views\Open\ChangePassword.cshtml" />
+    <Content Include="Views\Open\Study_Center.cshtml" />
+    <Content Include="Views\Open\SchoolOpen.cshtml" />
+    <Content Include="Views\Open\Studentlist.cshtml" />
+    <Content Include="Views\Open\AdmissionForm.cshtml" />
+    <Content Include="Views\Open\Registration_27_Apr.cshtml" />
+    <Content Include="Views\Open\Subjects_27_Apr.cshtml" />
+    <Content Include="Views\ImportData\Import11thCompartment.cshtml" />
+    <Content Include="Views\School\GradingFinalReport.cshtml" />
+    <Content Include="Views\Admin\AdmissionForm.cshtml" />
+    <Content Include="Views\Admin\ApplicationDetails.cshtml" />
+    <Content Include="Views\Admin\EditRegistration.cshtml" />
+    <Content Include="Views\MigrateSchool\AdminAllotRegNo.cshtml" />
+    <Content Include="Views\DM\ChallanList.cshtml" />
+    <Content Include="Views\DM\ChallanReceivedDetails.cshtml" />
+    <Content Include="Views\Open\AdmissionForm.cshtml_dheeraj" />
+    <Content Include="Views\Open\AdmissionForm_2.cshtml" />
+    <Content Include="Views\Open\AdmissionForm_DH.cshtml" />
+    <Content Include="Views\Open\Applicationstatus - Copy.cshtml" />
+    <Content Include="Views\Open\Applicationstatus_10_May.cshtml" />
+    <Content Include="Views\Open\ViewRegistration_10_May.cshtml" />
+    <Content Include="Views\Admin\SchoolReport.cshtml" />
+    <Content Include="Views\PunAdd\AdminConfirmationEdit.cshtml" />
+    <Content Include="Views\PunAdd\AdminConfirmationView.cshtml" />
+    <Content Include="Views\PunAdd\AdminPunAddCutList.cshtml" />
+    <Content Include="Views\PunAdd\AdminPunAddCutList.cshtml_20aprbkp" />
+    <Content Include="Views\PunAdd\AdminPunAddErrorListMIS.cshtml" />
+    <Content Include="Views\PunAdd\AdminPunAddHome.cshtml" />
+    <Content Include="Views\PunAdd\AdminPunAddUpload.cshtml" />
+    <Content Include="Views\PunAdd\PunAddRoll.cshtml" />
+    <Content Include="Views\Open\Agree.cshtml" />
+    <Content Include="Views\Open\Registration.cshtml-22" />
+    <Content Include="Views\Open\Subjects.cshtml-22" />
+    <Content Include="Views\Recheck\GenerateChallaan.cshtml" />
+    <Content Include="Views\Recheck\GenerateChallaan1.cshtml" />
+    <Content Include="Views\Recheck\PaymentForm.cshtml" />
+    <Content Include="Views\Recheck\RecheckAgree.cshtml" />
+    <Content Include="Views\Recheck\RecheckConfirmation.cshtml" />
+    <Content Include="Views\Recheck\RecheckExamination.cshtml" />
+    <Content Include="Views\Recheck\RecheckFinalPrint.cshtml" />
+    <Content Include="Views\Recheck\RecheckFinalPrint_1305.cshtml" />
+    <Content Include="Views\Recheck\RecheckFinalPrint_old.cshtml" />
+    <Content Include="Views\Recheck\RecheckForgotPassword.cshtml" />
+    <Content Include="Views\Recheck\RecheckIntroduction.cshtml" />
+    <Content Include="Views\School\ResultDeclareSchoolWise.cshtml" />
+    <Content Include="Views\School\SchoolResultDeclare.cshtml" />
+    <Content Include="App_Code\MenuView.cshtml" />
+    <Content Include="Views\Admin\AdminCutList.cshtml" />
+    <Content Include="Views\Admin\CutList.cshtml" />
+    <Content Include="Views\Admin\DownloadZIPFile.cshtml" />
+    <Content Include="Views\Admin\FirmSchoolCCEGrading.cshtml" />
+    <Content Include="Views\Admin\StudentRollNoMIS.cshtml" />
+    <Content Include="Views\Admin\AllotRegNoOPEN.cshtml" />
+    <Content Include="Views\School\CutList.cshtml" />
+    <Content Include="Views\Report\NinthEleventhResultReport.cshtml" />
+    <Content Include="Views\Admin\Change_Password.cshtml" />
+    <Content Include="Views\Admin\AdminResultUpdateMIS.cshtml" />
+    <Content Include="Views\Admin\FirmPhoto_Upload.cshtml" />
+    <Content Include="Views\Admin\FirmRecordDownload.cshtml" />
+    <Content Include="Views\Admin\FirmSchoolErrorList.cshtml" />
+    <Content Include="Views\Admin\Admin_Result_Update.cshtml_7apr" />
+    <Content Include="Views\DM\BulkChallanEntry.cshtml" />
+    <Content Include="Views\Admin\RecheckSecrecyPrint.cshtml" />
+    <Content Include="Views\Admin\SecrecyPrintList.cshtml" />
+    <Content Include="Views\Admin\ConductPrintList.cshtml" />
+    <Content Include="Views\Admin\RecheckConductPrint.cshtml" />
+    <Content Include="Views\Report\BankWiseFeeCollectionDetails.cshtml" />
+    <Content Include="Views\Report\CategoryWiseFeeCollectionDetails.cshtml" />
+    <Content Include="Views\Report\PrivateExamFormsStatus.cshtml" />
+    <Content Include="Views\Admin\DownloadCompartmentData.cshtml" />
+    <Content Include="Views\Bank\VerifyMISPSEB.cshtml" />
+    <Content Include="Views\Report\RegistrationReport.cshtml" />
+    <Content Include="Views\Login\Home.cshtml" />
+    <Content Include="Views\Open\ApplicationDetails.cshtml" />
+    <Content Include="Views\CompartmentCandidates\GenerateChallaan.cshtml" />
+    <Content Include="Views\Admin\FinalExamResult.cshtml" />
+    <Content Include="Views\Admin\ViewFinalResult.cshtml" />
+    <Content Include="Views\PunAdd\AdminPunAddConfidentialList.cshtml" />
+    <Content Include="Views\PunAdd\AdminPunAddResultSheet.cshtml" />
+    <Content Include="Views\PunAdd\AdminPunAddSignChart.cshtml" />
+    <Content Include="Views\PunAdd\PunAddAdmitCard.cshtml" />
+    <Content Include="Views\PunAdd\PunAddAdmitCardSearch.cshtml" />
+    <Content Include="Views\PunAdd\PunAddResult.cshtml" />
+    <Content Include="Views\School\ConfidentialListMatric.cshtml" />
+    <Content Include="Views\School\SignatureChartMatric.cshtml" />
+    <Content Include="Views\School\SignatureChartPrivate.cshtml" />
+    <Content Include="Views\School\ConfidentialListPrivate.cshtml" />
+    <Content Include="Views\School\ExamCentre.cshtml" />
+    <Content Include="Views\School\Agree.cshtml" />
+    <Content Include="Views\School\Eleventh_Result_Page.cshtml" />
+    <Content Include="Views\School\Eleventh_Result_Page_report.cshtml" />
+    <Content Include="Views\School\GradingReport.cshtml" />
+    <Content Include="Views\School\Ninth_Result_Page.cshtml" />
+    <Content Include="Views\School\Ninth_Result_Page_Report.cshtml" />
+    <Content Include="Views\School\ResultUpate.cshtml" />
+    <Content Include="Views\School\Schoolresultpage.cshtml" />
+    <Content Include="Views\School\SchoolResultUpdate.cshtml" />
+    <Content Include="Views\School\AdmitCardPrivate.cshtml" />
+    <Content Include="Views\PrivateCandidate\FinalPrintPrivateAdmitCardSearch.cshtml" />
+    <Content Include="Views\PrivateCandidate\FinalPrintPrivateMatricAdmitCard.cshtml" />
+    <Content Include="Views\PrivateCandidate\FinalPrintPrivateMatricAdmitCardSearch.cshtml" />
+    <Content Include="Views\PrivateCandidate\AdmitCardPrivate.cshtml" />
+    <Content Include="Views\PrivateCandidate\AdmitCardPrivateSearch.cshtml" />
+    <Content Include="Views\Report\ChallanFormReceivingStatus.cshtml" />
+    <Content Include="Views\DeoPortal\NoticeBoard.cshtml" />
+    <Content Include="Views\School\Complaint.cshtml" />
+    <Content Include="Views\School\DisplayComplaints.cshtml" />
+    <Content Include="Views\Admin\InboxMaster.cshtml" />
+    <Content Include="Views\Home\ChallanDepositDetails.cshtml" />
+    <Content Include="Views\Admin\ViewInbox.cshtml" />
+    <Content Include="Views\Bank\ViewAllFeeDeposit.cshtml" />
+    <Content Include="Views\School\DisplayGrievances.cshtml" />
+    <Content Include="Views\School\Grievances.cshtml" />
+    <Content Include="Views\School\PostGrievance.cshtml" />
+    <Content Include="Views\RegistrationPortal\N3Master.cshtml" />
+    <Content Include="Views\School\RegistrationForTraining.cshtml" />
+    <Content Include="Views\ImportData\ImportData10thClassReappear.cshtml" />
+    <Content Include="Views\ImportData\ImportDataN3Class.cshtml" />
+    <Content Include="Views\ImportData\ImportDataN3passedTCRef.cshtml" />
+    <Content Include="Views\Report\_opensummaryreport.cshtml" />
+    <Content Include="Views\ImportData\Import9thReappear.cshtml" />
+    <Content Include="Views\ImportData\Import9thReappearTCRef.cshtml" />
+    <Content Include="Views\RegistrationPortal\FinalReport.cshtml" />
+    <Content Include="PDF\StaffBulk.xls" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Views\Admin\FinalSubmittedRecordsAllAdmin.cshtml" />
+    <Content Include="Views\ExaminationPortal\ViewAllExamCandidate.cshtml" />
+    <Content Include="Views\CorrectionSubjects\M2FormModify.cshtml" />
+    <Content Include="Views\CorrectionSubjects\T2FormModify.cshtml" />
+    <Content Include="Views\CorrectionSubjects\SRSubjectCorrectionPerforma.cshtml" />
+    <Content Include="Views\Admin\AffiliationCertificate.cshtml" />
+    <Content Include="Views\Admin\AffiliationCertificate_old.cshtml" />
+    <Content Include="Views\Admin\DownloadPrivateData.cshtml" />
+    <Content Include="Views\Admin\BookSalesMaster.cshtml" />
+    <Content Include="Views\Admin\CommonCalculateFeeAdmin.cshtml" />
+    <None Include="Views\CorrectionSubjects\OpenSubjectCorrectionPerforma.cshtml" />
+    <Content Include="Views\DeoPortal\ImportStaff.cshtml" />
+    <Content Include="Views\DeoPortal\AddStaffNew.cshtml" />
+    <None Include="Views\Home\FinalReport.cshtml-old" />
+    <None Include="Views\Home\FinalReport.cshtml" />
+    <Content Include="Views\RegistrationPortal\N1Master.cshtml" />
+    <Content Include="Views\ImportData\ImportData10thpassedAnySchool.cshtml" />
+    <Content Include="Views\Report\SummaryOfExaminationReport.cshtml" />
+    <Content Include="Views\ImportData\Import10thRegNotExm.cshtml" />
+    <Content Include="Views\ImportData\Import12thRegNotExm.cshtml" />
+    <None Include="Views\Open\OpenMatricSubjectCorrectionPerforma.cshtml_OLD" />
+    <Content Include="Views\SchoolProfile\School_Staff_Details_View.cshtml" />
+    <Content Include="Views\SchoolProfile\IMPORT_SCHL_STAFF.cshtml" />
+    <Content Include="Views\RegistrationPortal\SchoolCorrectionAllRecord.cshtml" />
+    <Content Include="Views\PrivateCandidate\AdminPrivateCandidateConfirmation.cshtml" />
+    <Content Include="Views\PrivateCandidate\AdminFPPrivate.cshtml" />
+    <Content Include="Views\PrivateCandidate\AdminFPPrivateFinalPrint.cshtml" />
+    <Content Include="Views\PrivateCandidate\AdminFPPrivateSearch.cshtml" />
+    <Content Include="Views\PunAdd\PaymentForm.cshtml" />
+    <Content Include="Views\School\SignatureChartSrAtten.cshtml" />
+    <Content Include="Views\PunAdd\PunAddResults.cshtml" />
+    <Content Include="Views\RegistrationPortal\FinalPrintMatricOpenAdmitCard.cshtml" />
+    <Content Include="Views\Report\MigrationCount.cshtml" />
+    <Content Include="Views\RegistrationPortal\SchoolCorrectionPerformaRoughReport.cshtml" />
+    <Content Include="Views\RegistrationPortal\SchoolCorrectionPerformaRoughReportSJ.cshtml" />
+    <Content Include="Views\RegistrationPortal\SchoolCorrectionPerformaRoughReportSJO.cshtml" />
+    <Content Include="Views\RegistrationPortal\SchoolCorrectionPerformaRoughReportPS.cshtml" />
+    <Content Include="Views\PrivateCandidate\PrivateSearchDIC_Prac.cshtml" />
+    <Content Include="Views\RegistrationPortal\FinalPrintSeniorOpenAdmitCard.cshtml" />
+    <Content Include="Views\RegistrationPortal\FinalPrintSeniorAdmitCard.cshtml" />
+    <Content Include="Views\RegistrationPortal\FinalPrintMatricAdmitCard.cshtml" />
+    <Content Include="Views\School\SchoolCutListAdmin.cshtml" />
+    <Content Include="Views\School\CutList_Schl_Admin.cshtml" />
+    <Content Include="Views\School\AttendanceSupervisoryStaff.cshtml" />
+    <Content Include="Views\School\CutList_Schl_AdminN.cshtml" />
+    <Content Include="Views\School\PracSignatureChartMatric.cshtml" />
+    <Content Include="Views\School\PracSignatureChartSr.cshtml" />
+    <Content Include="Views\School\PracConfidentialListSenior.cshtml" />
+    <Content Include="Views\School\PracConfidentialListMatric.cshtml" />
+    <Content Include="Views\School\PracExamEnterMarks.cshtml" />
+    <Content Include="Views\School\PracExamFinalReport.cshtml" />
+    <Content Include="Views\School\PracExamFinalSubmit.cshtml" />
+    <Content Include="Views\School\PracExamRoughReport.cshtml" />
+    <Content Include="Views\School\PracExamViewList.cshtml" />
+    <Content Include="Views\School\PracticalAgree.cshtml" />
+    <Content Include="Views\School\PracticalChart.cshtml" />
+    <Content Include="Views\School\PracticalChartLink.cshtml" />
+    <Content Include="Views\School\PracticalExamMarks.cshtml" />
+    <Content Include="Views\School\PrivateCutList.cshtml" />
+    <Content Include="Views\School\Pvtcutlist.cshtml" />
+    <Content Include="Views\School\pvtcutlist_admin.cshtml" />
+    <Content Include="Views\PrivateCandidate\CandViewPracExamCentDtl.cshtml" />
+    <None Include="Views\School\Welcome.cshtml_SITEMENU" />
+    <Content Include="Views\RegistrationPortal\M1Formgrid.cshtml" />
+    <Content Include="Views\RegistrationPortal\M1FormModify.cshtml" />
+    <Content Include="Views\RegistrationPortal\M1Formview.cshtml" />
+    <Content Include="Views\TC\TCPrint.cshtml" />
+    <Content Include="Views\TC\TCRegProcess.cshtml" />
+    <Content Include="Views\TC\TCRequest.cshtml" />
+    <Content Include="Views\TC\TCRequestDone.cshtml" />
+    <Content Include="Views\School\UploadIndPhotoSignature.cshtml" />
+    <Content Include="Views\School\School_UDISE_Code.cshtml" />
+    <Content Include="Views\Shared\_HeaderPri.cshtml" />
+    <Content Include="Views\PrivateCandidate\Capcha1.cshtml" />
+    <Content Include="Views\PrivateCandidate\GenerateChallaan.cshtml" />
+    <Content Include="Views\PrivateCandidate\PaymentForm.cshtml" />
+    <Content Include="Views\PrivateCandidate\Pre_Private_Candidate_Introduction_Form.cshtml" />
+    <Content Include="Views\PrivateCandidate\PrivateCandidateConfirmation.cshtml" />
+    <Content Include="Views\PrivateCandidate\PrivateCandidateFinalPrint.cshtml" />
+    <Content Include="Views\PrivateCandidate\Private_Candidate_Examination_Form.cshtml" />
+    <Content Include="Views\PrivateCandidate\Private_Candidate_Introduction_Form.cshtml" />
+    <Content Include="Views\RegistrationPortal\ExaminationPortal.cshtml" />
+    <Content Include="Views\RegistrationPortal\N1Form.cshtml_ol" />
+    <Content Include="Views\Login\Index1.cshtml" />
+    <Content Include="Views\PrivateCandidate\PrivateCandidateFinalPrint_old.cshtml" />
+    <Content Include="Views\PrivateCandidate\PrivateCandidateConfirmationEdit.cshtml" />
+    <Content Include="Views\Shared\_Header16.cshtml" />
+    <Content Include="Views\Shared\_HeaderOPEN.cshtml" />
+    <Content Include="Views\Shared\_PrintChallan.cshtml" />
+    <Content Include="Views\Shared\_Card_Header.cshtml" />
+    <Content Include="Views\Shared\_ChallanDepositDetails.cshtml" />
+    <Content Include="Views\Webservice\Index.cshtml" />
+    <Content Include="Views\Webservice\IndexStaffImport.cshtml" />
+    <None Include="Web References\epunjabschool\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Views\TC\TCRequestSchl.cshtml" />
+    <Content Include="Views\Webservice\Indexdeo.cshtml" />
+    <None Include="Web References\epunjabschool\service-pseb.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Images\noimages.png" />
+    <Content Include="Images\Online_Messages.png" />
+    <Content Include="Images\pseb_logo.png" />
+    <Content Include="Images\PSEB_Text.png" />
+    <Content Include="Images\punjab.png" />
+    <Content Include="IX\010\Photo\arrow.png" />
+    <Content Include="IX\010\Photo\pseb_logo.png" />
+    <Content Include="IX\010\Sign\arrow.png" />
+    <Content Include="IX\010\Sign\punjab.png" />
+    <Content Include="IX\050\Sign\punjab.png" />
+    <Content Include="IX\060\Photo\pseb_logo.png" />
+    <Content Include="IX\060\Sign\punjab.png" />
+    <Content Include="IX\080\PhotoD\ipb_error.jpg" />
+    <Content Include="IX\080\SignD\City_Resi.PNG" />
+    <Content Include="IX\090\Photo\pseb_logo.png" />
+    <Content Include="IX\100\Photo\Form-icon.png" />
+    <Content Include="IX\100\Sign\Form-icon_old.png" />
+    <Content Include="IX\110\Photo\Form-icon.png" />
+    <Content Include="IX\110\Photo\pseb_logo.png" />
+    <Content Include="IX\110\Sign\Form-icon_old.png" />
+    <Content Include="IX\110\Sign\punjab.png" />
+    <Content Include="IX\130\Photo\Form-icon.png" />
+    <Content Include="IX\130\Sign\Form-icon_old.png" />
+    <Content Include="IX\140\Photo\pseb_logo.png" />
+    <Content Include="IX\150\Photo\11111-2014-03-07-680.jpg" />
+    <Content Include="IX\150\Photo\BlueBar.jpg" />
+    <Content Include="IX\150\Photo\pseb_logo.png" />
+    <Content Include="IX\150\Sign\download.png" />
+    <Content Include="IX\150\Sign\DSCN0966.JPG-2014-20-06-939.jpg" />
+    <Content Include="IX\150\Sign\pseb_logo.png" />
+    <Content Include="IX\160\Photo\11111-2014-03-07-680.jpg" />
+    <Content Include="IX\160\Photo\pseb_logo.png" />
+    <Content Include="IX\160\Sign\Form-icon_old.png" />
+    <Content Include="IX\165\Photo\pseb_logo.png" />
+    <Content Include="IX\165\Sign\punjab.png" />
+    <Content Include="IX\Photo\Form-icon.png" />
+    <Content Include="IX\Photo\Form-icon_old.png" />
+    <Content Include="IX\Sign\Form-icon.png" />
+    <Content Include="IX\Sign\Form-icon_old.png" />
+    <Content Include="Scripts\ai.0.15.0-build58334.js" />
+    <Content Include="Scripts\ai.0.15.0-build58334.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDF\Instructions for IX and X.pdf" />
+    <Content Include="Upload\E1\025\Photo\E1025100033P.jpg" />
+    <Content Include="Upload\E1\025\Photo\P.jpg" />
+    <Content Include="Upload\E1\025\Sign\E1025100033S.jpg" />
+    <Content Include="Upload\E1\025\Sign\S.jpg" />
+    <Content Include="Upload\E1\050\Photo\P.jpg" />
+    <Content Include="Upload\E1\050\Sign\S.jpg" />
+    <Content Include="Upload\E1\100\Photo\E1100100034P.jpg" />
+    <Content Include="Upload\E1\100\Sign\E1100100034S.jpg" />
+    <Content Include="Upload\E2\010\Photo\E2010100003P.jpg" />
+    <Content Include="Upload\E2\010\Sign\E2010100003S.jpg" />
+    <Content Include="Upload\E2\020\Photo\E2020100029P.jpg" />
+    <Content Include="Upload\E2\020\Sign\E2020100029S.jpg" />
+    <Content Include="Upload\E2\025\Photo\E2025100032P.jpg" />
+    <Content Include="Upload\E2\025\Sign\E2025100032S.jpg" />
+    <Content Include="Upload\E2\030\Photo\P.jpg" />
+    <Content Include="Upload\E2\030\Sign\S.jpg" />
+    <Content Include="Upload\E2\080\Photo\P.jpg" />
+    <Content Include="Upload\E2\080\Sign\S.jpg" />
+    <Content Include="Upload\E2\110\Photo\E2110100030P.jpg" />
+    <Content Include="Upload\E2\110\Photo\P.jpg" />
+    <Content Include="Upload\E2\110\Sign\E2110100030S.jpg" />
+    <Content Include="Upload\E2\110\Sign\S.jpg" />
+    <Content Include="Upload\E2\120\Photo\E2120100002P.jpg" />
+    <Content Include="Upload\E2\120\Sign\E2120100002S.jpg" />
+    <Content Include="Upload\E2\145\Photo\E2145100028P.jpg" />
+    <Content Include="Upload\E2\145\Photo\P.jpg" />
+    <Content Include="Upload\E2\145\Sign\E2145100028S.jpg" />
+    <Content Include="Upload\E2\145\Sign\S.jpg" />
+    <Content Include="Upload\E2\170\Photo\E2170100003P.jpg" />
+    <Content Include="Upload\E2\170\Sign\E2170100003S.jpg" />
+    <Content Include="Upload\E2\175\Photo\E2175100001P.jpg" />
+    <Content Include="Upload\E2\175\Sign\E2175100001S.jpg" />
+    <Content Include="Upload\M2\030\Photo\M2030100035P.jpg" />
+    <Content Include="Upload\M2\030\Sign\M2030100035S.jpg" />
+    <Content Include="Upload\M2\060\Photo\M2060100039P.jpg" />
+    <Content Include="Upload\M2\060\Photo\P.jpg" />
+    <Content Include="Upload\M2\060\Sign\M2060100039S.jpg" />
+    <Content Include="Upload\M2\060\Sign\S.jpg" />
+    <Content Include="Upload\M2\070\Photo\M2070100036P.jpg" />
+    <Content Include="Upload\M2\070\Sign\M2070100036S.jpg" />
+    <Content Include="Upload\N1\010\Photo\N1010100012P.jpg" />
+    <Content Include="Upload\N1\010\Sign\N1010100012S.jpg" />
+    <Content Include="Upload\N1\020\Photo\N1020100021P.jpg" />
+    <Content Include="Upload\N1\020\Sign\N1020100021S.jpg" />
+    <Content Include="Upload\N1\070\Photo\N1070000008P.jpg" />
+    <Content Include="Upload\N1\070\Sign\N1070000008S.jpg" />
+    <Content Include="Upload\N1\120\Photo\N1000002P.jpg" />
+    <Content Include="Upload\N1\120\Photo\N11200000011P.jpg" />
+    <Content Include="Upload\N1\120\Photo\N11200000011S.jpg" />
+    <Content Include="Upload\N1\120\Photo\N1120100024P.jpg" />
+    <Content Include="Upload\N1\120\Sign\N1000002S.jpg" />
+    <Content Include="Upload\N1\120\Sign\N1120100024S.jpg" />
+    <Content Include="Upload\N1\130\Photo\N1130100015P.jpg" />
+    <Content Include="Upload\N1\130\Photo\N1130100023P.jpg" />
+    <Content Include="Upload\N1\130\Photo\P.jpg" />
+    <Content Include="Upload\N1\130\Sign\N1130100015S.jpg" />
+    <Content Include="Upload\N1\130\Sign\N1130100023S.jpg" />
+    <Content Include="Upload\N1\130\Sign\S.jpg" />
+    <Content Include="Upload\N1\140\Photo\N1140100016P.jpg" />
+    <Content Include="Upload\N1\140\Sign\N1140100016S.jpg" />
+    <Content Include="Upload\N2\040\Photo\N20400000010P.jpg" />
+    <Content Include="Upload\N2\040\Sign\N20400000010S.jpg" />
+    <Content Include="Upload\N2\120\Photo\N2120100025P.jpg" />
+    <Content Include="Upload\N2\120\Sign\N2120100025S.jpg" />
+    <Content Include="Upload\N3\040\Photo\N3040000009P.jpg" />
+    <Content Include="Upload\N3\040\Sign\N3040000009S.jpg" />
+    <Content Include="Upload\N3\070\Photo\N3070100026P.jpg" />
+    <Content Include="Upload\N3\070\Sign\N3070100026S.jpg" />
+    <Content Include="Upload\N3\100\Photo\N31000000011P.jpg" />
+    <Content Include="Upload\N3\100\Sign\N31000000011S.jpg" />
+    <Content Include="Upload\N3\120\Photo\N3120100018P.jpg" />
+    <Content Include="Upload\N3\120\Sign\N3120100018S.jpg" />
+    <Content Include="Upload\N3\140\Photo\N3140000003P.jpg" />
+    <Content Include="Upload\N3\140\Sign\N3140000003S.jpg" />
+    <Content Include="Views\RegistrationPortal\RoughReport.cshtml" />
+    <Content Include="RPTDatasets\firmdata_onlineDataSet.xsc">
+      <DependentUpon>firmdata_onlineDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="PDF\BankSample.xls" />
+    <Content Include="PDF\ExamErrorSample.xls" />
+    <Content Include="PDF\10th_CCE.pdf" />
+    <None Include="Properties\PublishProfiles\pseb29.pubxml" />
+    <Content Include="PunAdd\FinalPrintPrivateAdmitCard.cshtml" />
+    <Content Include="PunAdd\FinalPrintPrivateAdmitCardSearch.cshtml" />
+    <Content Include="PunAdd\FinalPrintPrivateMatricAdmitCard.cshtml" />
+    <Content Include="PunAdd\FinalPrintPrivateMatricAdmitCardSearch.cshtml" />
+    <Content Include="PunAdd\PunAddConfirmation.cshtml" />
+    <Content Include="PunAdd\PunAddConfirmationEdit.cshtml" />
+    <Content Include="PunAdd\PunAddExamination.cshtml" />
+    <Content Include="PunAdd\PunAddFinalPrint.cshtml" />
+    <Content Include="PunAdd\PunAddFinalPrint_2703.cshtml" />
+    <Content Include="PunAdd\PunAddForgotPassword.cshtml" />
+    <Content Include="PunAdd\PunAddIntroduction.cshtml" />
+    <None Include="RPTDatasets\firmdata_onlineDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>firmdata_onlineDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="RPTDatasets\firmdata_onlineDataSet.xss">
+      <DependentUpon>firmdata_onlineDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="RPTDatasets\MatricSubjectDataSet.xsc">
+      <DependentUpon>MatricSubjectDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="RPTDatasets\MatricSubjectDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MatricSubjectDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="RPTDatasets\MatricSubjectDataSet.xss">
+      <DependentUpon>MatricSubjectDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\common.js" />
+    <Content Include="Scripts\daterangepicker.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.12.4.js" />
+    <Content Include="Scripts\jquery-ui.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\keyboard.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\picker_date.js" />
+    <Content Include="Scripts\punjabi.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="StudentVerificationForm.aspx" />
+    <Content Include="RoughReport.aspx" />
+    <Content Include="SVMReport.aspx" />
+    <None Include="Web References\epunjabschool\service-pseb.disco" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\ConfirmEmail.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\ForgotPassword.cshtml" />
+    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ResetPassword.cshtml" />
+    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\SendCode.cshtml" />
+    <Content Include="Views\Account\VerifyCode.cshtml" />
+    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
+    <Content Include="Views\Manage\ChangePassword.cshtml" />
+    <Content Include="Views\Manage\Index.cshtml" />
+    <Content Include="Views\Manage\ManageLogins.cshtml" />
+    <Content Include="Views\Manage\SetPassword.cshtml" />
+    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
+    <Content Include="Views\Shared\Lockout.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\AdminSchoolMaster\ShowData.cshtml" />
+    <Content Include="Views\Shared\ViewPage1.cshtml" />
+    <Content Include="Views\Registration\Registration.cshtml" />
+    <Content Include="Views\Registration\vssver2.scc" />
+    <Content Include="Views\School\Add_School.cshtml" />
+    <Content Include="Views\School\Admin_School_Master.cshtml" />
+    <Content Include="Views\School\Open_School_Master.cshtml" />
+    <Content Include="Views\School\School_Master.cshtml" />
+    <Content Include="Views\School\School_Modification_Form.cshtml" />
+    <Content Include="Views\School\School_Password.cshtml" />
+    <Content Include="Views\School\School_View_Form.cshtml" />
+    <Content Include="Views\Shared\_Header.cshtml" />
+    <Content Include="Views\Shared\_Login_Header.cshtml" />
+    <Content Include="Views\Login\Choose_Session.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Login\Login.cshtml" />
+    <Content Include="Views\RegistrationPortal\Agree.cshtml" />
+    <Content Include="Views\RegistrationPortal\N1Form_old.cshtml" />
+    <Content Include="Views\RegistrationPortal\N1Formgrid.cshtml" />
+    <Content Include="Views\RegistrationPortal\N1FormModify.cshtml" />
+    <Content Include="Views\RegistrationPortal\N1formview.cshtml" />
+    <Content Include="Views\RegistrationPortal\N2Form.cshtml" />
+    <Content Include="Views\RegistrationPortal\N3Form.cshtml" />
+    <Content Include="Views\RegistrationPortal\Portal.cshtml" />
+    <Content Include="Views\Challan\ExamChallanCancel.cshtml" />
+    <Content Include="Views\Admin\SummaryPerformaReport.cshtml" />
+    <Content Include="Views\Home\ExamCalculateFeeByDate.cshtml" />
+    <Content Include="Views\Admin\ExamChallanVerify.cshtml" />
+    <Content Include="Views\CorrectionSubjects\StreamCorrectionPerforma.cshtml" />
+    <Content Include="Views\CorrectionSubjects\SubjectCorrectionPerforma.cshtml" />
+    <Content Include="Views\DeoPortal\Center_List.cshtml" />
+    <Content Include="Views\DeoPortal\Home.cshtml" />
+    <Content Include="Views\DeoPortal\Index.cshtml" />
+    <Content Include="Views\CorrectionSubjects\ImageCorrectionPerforma.cshtml" />
+    <Content Include="Views\DeoPortal\ADDCENT.cshtml" />
+    <Content Include="Views\DeoPortal\ADDCENTRE.cshtml" />
+    <Content Include="Views\DeoPortal\AddCluster.cshtml" />
+    <Content Include="Views\DeoPortal\AddStaff - Copy.cshtml" />
+    <Content Include="Views\DeoPortal\AddStaff.cshtml" />
+    <Content Include="Views\DeoPortal\CenterList.cshtml" />
+    <Content Include="Views\DeoPortal\CentreReport.cshtml" />
+    <Content Include="Views\DeoPortal\ClusterList.cshtml" />
+    <Content Include="Views\DeoPortal\DeoHome.cshtml" />
+    <Content Include="Views\DeoPortal\VIEWCENTRE.cshtml" />
+    <Content Include="Views\MigrateSchool\AllotRegNo.cshtml" />
+    <Content Include="Views\MigrateSchool\ViewAllotRegNo.cshtml" />
+    <Content Include="Views\DeoPortal\CentreReportPrint.cshtml" />
+    <Content Include="Views\DeoPortal\ClusterListReport.cshtml" />
+    <Content Include="Views\DeoPortal\ClusterListReportPrint.cshtml" />
+    <Content Include="Views\DeoPortal\ClusterWiseCentreList.cshtml" />
+    <Content Include="Views\DeoPortal\ClusterWiseStaffListPrint.cshtml" />
+    <Content Include="Views\DeoPortal\ClusterWiseCentreListPrint.cshtml" />
+    <Content Include="Views\DeoPortal\FinalSubmitDeoPortal.cshtml" />
+    <Content Include="Views\Admin\FirmFinalPrint.cshtml" />
+    <Content Include="Views\Admin\FirmSchoolCorrection.cshtml" />
+    <Content Include="Views\Admin\FirmSchoolCorrectionAllCorrectionRecord.cshtml" />
+    <Content Include="Views\Admin\FirmSchoolCorrectionFinalSubmit.cshtml" />
+    <Content Include="Views\Admin\FirmSchoolCorrectionPendingCorrectionRecord.cshtml" />
+    <Content Include="Views\Admin\FirmCorrectionHome.cshtml" />
+    <Content Include="Views\DeoPortal\ClusterWiseCentreListPrintLot.cshtml" />
+    <Content Include="Views\DeoPortal\ClusterWiseStaffListPrintLot.cshtml" />
+    <Content Include="Views\DeoPortal\FinalPrint.cshtml" />
+    <Content Include="Views\DeoPortal\StaffAddDetails.cshtml" />
+    <Content Include="Views\DeoPortal\AddExaminer.cshtml" />
+    <Content Include="Views\DeoPortal\Examiner.cshtml" />
+    <Content Include="Views\Admin\FirmDownloadStudentRecord.cshtml" />
+    <Content Include="Views\Admin\StudentAllReport.cshtml" />
+    <Content Include="Views\Admin\FirmChangePassword.cshtml" />
+    <Content Include="Views\DeoPortal\VIEWSTAFF.cshtml" />
+    <Content Include="Views\DeoPortal\UPDATESTAFF.cshtml" />
+    <Content Include="Views\DeoPortal\UpdateExaminer.cshtml" />
+    <Content Include="Views\Admin\FirmSchoolCorrectionPending.cshtml" />
+    <Content Include="Views\Admin\FirmSchoolCorrectionUpdated.cshtml" />
+    <Content Include="Views\DeoPortal\ForgotPassword.cshtml" />
+    <Content Include="Views\DeoPortal\DeoSummaryReport.cshtml" />
+    <Content Include="Views\DeoPortal\Change_Password.cshtml" />
+    <Content Include="Views\DeoPortal\DeoProfileDetails.cshtml" />
+    <Content Include="Views\Admin\ErrorListMIS.cshtml" />
+    <Content Include="Views\DeoPortal\ExaminerSummaryReport.cshtml" />
+    <Content Include="Views\DeoPortal\ExaminersReport.cshtml" />
+    <Content Include="Views\DeoPortal\FinalSubmitExaminer.cshtml" />
+    <Content Include="Views\DeoPortal\AdminViewStaff.cshtml" />
+    <Content Include="Views\DeoPortal\StaffLetter.cshtml" />
+    <Content Include="Views\DeoPortal\SupervisoryStaffList.cshtml" />
+    <Content Include="Views\DeoPortal\CapacityLetter.cshtml" />
+    <Content Include="Views\Home\SampleDocuments.cshtml" />
+    <Content Include="Views\Admin\FirmDownloadStudentRecordOpen.cshtml" />
+    <Content Include="Views\DeoPortal\DeoLetter.cshtml" />
+    <Content Include="Views\DeoPortal\ReplacementStaff.cshtml" />
+    <Content Include="Views\DeoPortal\ExamCentre.cshtml" />
+    <Content Include="Views\DM\Challaan.cshtml" />
+    <Content Include="Views\DM\Change_Password.cshtml" />
+    <Content Include="Views\DM\CompleteChallanDetails.cshtml" />
+    <Content Include="Views\DM\GenerateChallan.cshtml" />
+    <Content Include="Views\DM\SchoolList.cshtml" />
+    <Content Include="Views\DM\ViewAllChallans.cshtml" />
+    <Content Include="Views\Admin\FirmPrivateCandidateErrorList.cshtml" />
+    <Content Include="Views\PunAdd\FinalPrintPrivateAdmitCard.cshtml" />
+    <Content Include="Views\PunAdd\FinalPrintPrivateAdmitCardSearch.cshtml" />
+    <Content Include="Views\PunAdd\FinalPrintPrivateMatricAdmitCard.cshtml" />
+    <Content Include="Views\PunAdd\FinalPrintPrivateMatricAdmitCardSearch.cshtml" />
+    <Content Include="Views\PunAdd\PunAddConfirmation.cshtml" />
+    <Content Include="Views\PunAdd\PunAddConfirmationEdit.cshtml" />
+    <Content Include="Views\PunAdd\PunAddExamination.cshtml" />
+    <Content Include="Views\PunAdd\PunAddFinalPrint.cshtml" />
+    <Content Include="Views\PunAdd\PunAddFinalPrint_2703.cshtml" />
+    <Content Include="Views\PunAdd\PunAddForgotPassword.cshtml" />
+    <Content Include="Views\PunAdd\PunAddIntroduction.cshtml" />
+    <Content Include="Views\PrivateCandidate\FinalPrintPrivateAdmitCard.cshtml" />
+    <None Include="Views\RegistrationPortal\Portal.cshtml_8nov" />
+    <Content Include="Views\SchoolProfile\Change_Password.cshtml" />
+    <Content Include="Views\SchoolProfile\School_Staff_Details.cshtml" />
+    <Content Include="Views\SchoolProfile\Update_School_Information.cshtml" />
+    <Content Include="Views\School\Open_School_Modification_Form.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Shared\_Headerui.cshtml" />
+    <Content Include="Views\RegistrationPortal\StudentVerificationForm.cshtml" />
+    <Content Include="Views\RegistrationPortal\N2Formgrid.cshtml" />
+    <Content Include="Views\RegistrationPortal\N2FormModify.cshtml" />
+    <Content Include="Views\RegistrationPortal\N2formview.cshtml" />
+    <Content Include="Views\RegistrationPortal\N3Formgrid.cshtml" />
+    <Content Include="Views\RegistrationPortal\N3FormModify.cshtml" />
+    <Content Include="Views\RegistrationPortal\N3formview.cshtml" />
+    <Content Include="Views\RegistrationPortal\N1Form.cshtml" />
+    <Content Include="Views\RegistrationPortal\E2Form.cshtml" />
+    <Content Include="Views\RegistrationPortal\E2Formview.cshtml" />
+    <Content Include="Views\RegistrationPortal\E2Formgrid.cshtml" />
+    <Content Include="Views\RegistrationPortal\E2FormModify.cshtml" />
+    <Content Include="Views\RegistrationPortal\ShowResult.cshtml" />
+    <Content Include="Views\RegistrationPortal\RoughReportN1.cshtml" />
+    <Content Include="Views\Admin\FeeEntry.cshtml" />
+    <Content Include="Views\Home\CalculateFee.cshtml" />
+    <Content Include="Views\Home\PaymentForm.cshtml" />
+    <Content Include="Views\Home\GenerateChallaan.cshtml" />
+    <Content Include="Views\Login\ForgotPassword.cshtml" />
+    <Content Include="Views\Home\FinalPrint.cshtml" />
+    <Content Include="Views\Admin\adminregverifypage.cshtml" />
+    <Content Include="Views\Admin\Admin_Regno_Update.cshtml" />
+    <Content Include="Views\Home\ExamCalculateFee.cshtml" />
+    <Content Include="Views\ExaminationPortal\ExamFormCalFee.cshtml" />
+    <Content Include="Views\ExaminationPortal\CompleteExamFormFeeDetails.cshtml" />
+    <Content Include="Views\ExaminationPortal\Printlist.cshtml" />
+    <Content Include="Views\Home\FinalExamPortalReport.cshtml" />
+    <Content Include="Views\ExaminationPortal\ImportedPrintList.cshtml" />
+    <Content Include="Views\ExaminationPortal\ImportedPrintListOpen.cshtml" />
+    <Content Include="Views\ExaminationPortal\PrintlistOpen.cshtml" />
+    <Content Include="Views\Home\CalculateFeeAdmin.cshtml" />
+    <None Include="Views\Home\FinalPrint.cshtml_30sep" />
+    <Content Include="Views\Home\Home.cshtml" />
+    <Content Include="Views\School\Schoollist.cshtml" />
+    <Content Include="Views\RegistrationPortal\E1Form.cshtml" />
+    <Content Include="Views\RegistrationPortal\E1Formgrid.cshtml" />
+    <Content Include="Views\RegistrationPortal\E1FormModify.cshtml" />
+    <Content Include="Views\RegistrationPortal\E1formview.cshtml" />
+    <Content Include="Views\RegistrationPortal\E1Master_24aug.cshtml" />
+    <Content Include="Views\RegistrationPortal\M1Form.cshtml" />
+    <Content Include="Views\RegistrationPortal\M1Master.cshtml" />
+    <Content Include="Views\RegistrationPortal\M2Form.cshtml" />
+    <Content Include="Views\RegistrationPortal\M2Formgrid.cshtml" />
+    <Content Include="Views\RegistrationPortal\M2FormModify.cshtml" />
+    <Content Include="Views\RegistrationPortal\M2Formview.cshtml" />
+    <Content Include="Views\RegistrationPortal\T1Master.cshtml" />
+    <Content Include="Views\RegistrationPortal\T2Form.cshtml" />
+    <Content Include="Views\RegistrationPortal\Agree1.cshtml" />
+    <Content Include="Views\Bank\Login.cshtml" />
+    <Content Include="Views\Bank\Welcome.cshtml" />
+    <Content Include="Views\Shared\_BankLayout.cshtml" />
+    <Content Include="Views\Bank\DownloadChallan.cshtml" />
+    <Content Include="Views\Bank\DownloadPreviousChallan.cshtml" />
+    <Content Include="Views\Bank\VerifyMIS.cshtml" />
+    <Content Include="Views\Bank\ViewMISDetails.cshtml" />
+    <Content Include="Views\Bank\ChangePassword.cshtml" />
+    <Content Include="Views\Bank\ViewProfile.cshtml" />
+    <Content Include="Views\SchoolProfile\DisplaySchoolStaffDetails.cshtml" />
+    <Content Include="Views\ImportData\ImportData10thpassed141516.cshtml" />
+    <Content Include="Views\ImportData\ImportData10thClass.cshtml" />
+    <Content Include="Views\ImportData\ImportData11THFailed.cshtml" />
+    <Content Include="Views\ImportData\ImportData9thClass.cshtml" />
+    <Content Include="Views\ImportData\ImportDataViewAllRecords.cshtml" />
+    <Content Include="Views\ImportData\ImportDataViewTo11thClass.cshtml" />
+    <Content Include="Views\ImportData\ImportDataViewTo11thClassModify.cshtml" />
+    <Content Include="Views\Admin\adminresultpage.cshtml" />
+    <Content Include="Views\Admin\Admin_Result_Update.cshtml" />
+    <Content Include="Views\Admin\ChallanDetail.cshtml" />
+    <Content Include="Views\Admin\ViewChallanDetail.cshtml" />
+    <Content Include="Views\Challan\BankMISPage.cshtml" />
+    <Content Include="Views\Challan\ChallanDetails.cshtml" />
+    <Content Include="Views\Challan\_bindpopup.cshtml" />
+    <Content Include="Views\Bank\ErrorList.cshtml" />
+    <Content Include="Views\ImportData\Import11thPass.cshtml" />
+    <Content Include="Views\ImportData\Import11thPassAnySchoolRegNum.cshtml" />
+    <Content Include="Views\ImportData\Import11thPassedTCRef.cshtml" />
+    <Content Include="Views\ImportData\Import12thFail.cshtml" />
+    <Content Include="Views\Home\FinalPrintReport.cshtml" />
+    <Content Include="Views\ImportData\Import10thFail.cshtml" />
+    <Content Include="Views\ImportData\Import9thPass.cshtml" />
+    <Content Include="Views\ImportData\Import9thPassAnySchoolRegNum.cshtml" />
+    <Content Include="Views\ImportData\Import9thPassedTCRef.cshtml" />
+    <Content Include="Views\Admin\VerifyChallan.cshtml" />
+    <Content Include="Views\Home\ExamPaymentForm.cshtml" />
+    <None Include="Views\ImportData\ImportDataViewTo11thClassModify.cshtml_24aug" />
+    <Content Include="Views\ImportData\ImportDataViewTo11thClassView.cshtml" />
+    <Content Include="Views\ImportData\ImportDataViewTo11thFailed.cshtml" />
+    <Content Include="Views\ImportData\ImportDataViewTo11thFailedModify.cshtml" />
+    <Content Include="Views\ImportData\ImportDataViewTo11thFailedView.cshtml" />
+    <Content Include="Views\ImportData\MasterImport.cshtml" />
+    <Content Include="Views\RegistrationPortal\Portal_Agree.cshtml" />
+    <Content Include="Views\Report\SummaryReports.cshtml" />
+    <Content Include="Views\ImportData\ImportData10thpassedTCRef.cshtml" />
+    <Content Include="Views\PrivateCandidate\ForgotPassword.cshtml" />
+    <Content Include="Views\PrivateCandidate\GenerateChallaan_old.cshtml" />
+    <Content Include="Views\RegistrationPortal\SchoolCorrection.cshtml" />
+    <Content Include="Views\RegistrationPortal\SchoolCorrectionFinalPrintList.cshtml" />
+    <Content Include="Views\RegistrationPortal\SchoolCorrectionPerformaFinalPrintSession.cshtml" />
+    <Content Include="Views\Shared\_Headerdeo.cshtml" />
+    <Content Include="Views\RegistrationPortal\SchoolCorrectionPerformaFinalPrintSessionPS.cshtml" />
+    <Content Include="Views\Shared\_printTCLayout.cshtml" />
+    <Content Include="Views\Shared\_Print_Header.cshtml" />
+    <Content Include="Views\RegistrationPortal\ViewRegNo.cshtml" />
+    <Content Include="Views\School\SchoolCutList.cshtml" />
+    <Content Include="Views\School\Photo_Upload_Open.cshtml" />
+    <Content Include="Views\Shared\_HeaderCorr.cshtml" />
+    <Content Include="Views\School\SignatureChartSr.cshtml" />
+    <Content Include="Views\School\ConfidentialListSenior.cshtml" />
+    <Content Include="Views\Report\CCEGradingReports.cshtml" />
+    <Content Include="Views\Report\_ccegradingeport.cshtml" />
+    <Content Include="Views\School\CCEFinalReport.cshtml" />
+    <Content Include="Views\School\CCEReport.cshtml" />
+    <Content Include="Views\School\CCE_Grading_Portal.cshtml" />
+    <Content Include="Views\School\CCE_Senior.cshtml" />
+    <Content Include="Views\Shared\_HeaderDM.cshtml" />
+    <Content Include="Views\School\Grading.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="BankUpload\Upload2015Matric\" />
+    <Folder Include="bin\de\" />
+    <Folder Include="bin\es\" />
+    <Folder Include="bin\fr\" />
+    <Folder Include="bin\it\" />
+    <Folder Include="bin\ja\" />
+    <Folder Include="bin\ko\" />
+    <Folder Include="bin\pt\" />
+    <Folder Include="bin\roslyn\" />
+    <Folder Include="bin\ru\" />
+    <Folder Include="bin\zh-CHS\" />
+    <Folder Include="bin\zh-CHT\" />
+    <Folder Include="bin\zh-Hans\" />
+    <Folder Include="bin\zh-Hant\" />
+    <Folder Include="Content\css\" />
+    <Folder Include="IX\050\Photo\" />
+    <Folder Include="IX\080\Photo\" />
+    <Folder Include="IX\080\Sign\" />
+    <Folder Include="IX\090\Sign\" />
+    <Folder Include="UploadFiles\" />
+    <Folder Include="Views\Summary\" />
+    <Folder Include="Views\Test\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="RPTReports\ExamReport1Open.rdlc" />
+    <EmbeddedResource Include="RPTReports\ExamReportMatricOpen2018.rdlc" />
+    <EmbeddedResource Include="RPTReports\ExamReportMatricRegular2018.rdlc" />
+    <EmbeddedResource Include="RPTReports\ExamReportSeniorOpen2018.rdlc" />
+    <EmbeddedResource Include="RPTReports\ExamReportSeniorRegular2018.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPTReports\SeniorExamReportOpen.rdlc" />
+    <EmbeddedResource Include="RPTReports\StudentAllReport.rdlc" />
+    <None Include="RPTReports\ExamReport1Open.rdlc_2nov" />
+    <EmbeddedResource Include="RPTReports\ExamReport1.rdlc" />
+    <EmbeddedResource Include="RPTReports\OpenSubjectRpt.rdlc" />
+    <EmbeddedResource Include="RPTReports\MatricSubjectRpt.rdlc" />
+    <EmbeddedResource Include="RPTReports\Report1.rdlc" />
+    <EmbeddedResource Include="RPTReports\Report1_21sep.rdlc" />
+    <EmbeddedResource Include="RPTReports\RptRoughReport.rdlc" />
+    <EmbeddedResource Include="RPTReports\RptRoughReport_17oct16.rdlc" />
+    <EmbeddedResource Include="RPTReports\RptRoughReport_dheeraj_23aug_8pm.rdlc" />
+    <EmbeddedResource Include="RPTReports\RptStudentVerificationFormNew.rdlc" />
+    <EmbeddedResource Include="RPTReports\RptStudentVerificationFormNew_24Aug16.rdlc" />
+    <EmbeddedResource Include="RPTReports\RptRoughReport_24aug16.rdlc" />
+    <None Include="RPTReports\SeniorExamReportOpen.rdlc_2nov" />
+    <EmbeddedResource Include="RPTReports\SeniorExamReport.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://epunjabschool.gov.in/webservice/service-pseb.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\epunjabschool\</RelPath>
+      <UpdateFromURL>http://epunjabschool.gov.in/webservice/service-pseb.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>PSEBONLINE_epunjabschool_service_pseb</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>57129</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:57129/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
